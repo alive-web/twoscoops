@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Sprinkles{% endblock title %}
+{% block content %}
+<ul>
+{% for object in sprinkles %}
+    <li>
+        {{ object.name }}
+    </li>
+{% endfor %}
+</ul>
+{% endblock content %}
