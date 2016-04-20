@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'twoscoops.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 config = configparser.ConfigParser()
-config.read('main.cfg')
+config.read(os.path.join(BASE_DIR, "main.cfg"))
 DATABASE_URL = config.get('db', 'DATABASE_URL')
 
 DATABASES = {
-    'default': dj_database_url.config(DATABASE_URL)
+    'default': dj_database_url.config(default=DATABASE_URL)
 }
 
 
