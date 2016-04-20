@@ -1,3 +1,14 @@
+__author__ = 'plevytskyi'
 from django.test import TestCase
 
-# Create your tests here.
+
+class FooTest(TestCase):
+
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def test_one_equals_one(self):
+        self.assertEqual(1, 0)
